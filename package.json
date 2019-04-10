@@ -1,0 +1,23 @@
+{
+  "name": "cloud_project",
+  "version": "1.0.0",
+  "description": "\"# CloudFinalProject\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KingDzx/CloudFinalProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KingDzx/CloudFinalProject/issues"
+  },
+  "homepage": "https://github.com/KingDzx/CloudFinalProject#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
