@@ -44,33 +44,34 @@
 </head>
 <body>
 <div class="container register-form">
-            <div class="form">
-                <div class="note">
-                    <p>CLOUD SHOP</p>
-                </div>
-
-                <div class="form-content">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="email">Email : </label>
-                                <input type="text" class="form-control" id="email" placeholder="Your Email *" value=""/>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="password">Password : </label>
-                                <input type="text" class="form-control" id="password" placeholder="Your Password *" value=""/>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <p>Don't have an account? <a href="">Sign up</a></p>
-                    </div>
-                    <button type="button" class="btnSubmit">Submit</button>
-                </div>
-            </div>
+    <div class="form">
+        <div class="note">
+            <p>CLOUD SHOP</p>
         </div>
+        <form action="/login" method="post">
+            <div class="form-content">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="email">Email : </label>
+                            <input type="text" class="form-control" id="email" placeholder="Your Email *" name="email" value=""/>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="password">Password : </label>
+                            <input type="password" class="form-control" id="password" placeholder="Your Password *" name="password" value=""/>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p>Don't have an account? <a href="registration">Sign up</a></p>
+                </div>
+                <input class='btnSubmit' type="submit" value="Log In">
+            </div>
+        </form>
+    </div>
+</div>
 
 </body>
 </html>

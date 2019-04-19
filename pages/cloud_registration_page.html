@@ -44,45 +44,46 @@
 </head>
 <body>
 <div class="container register-form">
-            <div class="form">
-                <div class="note">
-                    <p>CLOUD SHOP</p>
-                </div>
-
-                <div class="form-content">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="email">Email : </label>
-                                <input type="text" class="form-control" id="email" placeholder="Your Email *" value=""/>
-                            </div>
-                            <div class="form-group">
-                                <label for="name">Name : </label>
-                                <input type="text" class="form-control" id="name" placeholder="Your Name *" value=""/>
-                            </div>
-                            <div class="form-group">
-                                <label for="number">Number : </label>
-                                <input type="text" class="form-control" id="number" placeholder="Phone Number *" value=""/>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="password">Password : </label>
-                                <input type="text" class="form-control" id="password" placeholder="Your Password *" value=""/>
-                            </div>
-                            <div class="form-group">
-                                <label for="password2">Confirm : </label>
-                                <input type="text" class="form-control" id="password2" placeholder="Confirm Password *" value=""/>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <p>Already have an account? <a href="registration">Login</a></p>
-                    </div>
-                    <button type="button" class="btnSubmit">Submit</button>
-                </div>
-            </div>
+    <div class="form">
+        <div class="note">
+            <p>CLOUD SHOP</p>
         </div>
+        <form action="/registration" method="post">
+            <div class="form-content">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="email">Email : </label>
+                            <input type="text" class="form-control" id="email" placeholder="Your Email *" name="email" value=""/>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Name : </label>
+                            <input type="text" class="form-control" id="name" placeholder="Your Name *" name="name" value=""/>
+                        </div>
+                        <div class="form-group">
+                            <label for="number">Number : </label>
+                            <input type="text" class="form-control" id="number" placeholder="Phone Number *" name="number" value=""/>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="password">Password : </label>
+                            <input type="password" class="form-control" id="password" placeholder="Your Password *" name="password" value=""/>
+                        </div>
+                        <div class="form-group">
+                            <label for="password2">Confirm : </label>
+                            <input type="password" class="form-control" id="password2" placeholder="Confirm Password *" name="password2" value=""/>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p>Already have an account? <a href="login">Login</a></p>
+                </div>
+                <input class='btnSubmit' type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</div>
 
 </body>
 </html>
