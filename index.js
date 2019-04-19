@@ -22,7 +22,5 @@ con.connect(function(err) {
     } 
   console.log("Connected!");
 });
+app.listen(port)
 
-app.listen(port, () => {
-  console.log('We are live on ' + port);
-});
