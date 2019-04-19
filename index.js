@@ -1,5 +1,5 @@
 const express = require('express')
-const port=5000
+const port=3000
 const app = express()
 const path= require('path');
 const BP = require('body-parser');
@@ -41,7 +41,7 @@ app.post('/registration', function(req, res){
 
   if (password == password2){
     var queryStatement = "INSERT INTO UserAccount (Email, Name, Number, Password) VALUES ('"+email+"', '"+name+"','"+number+"','"+password+"')";
- 
+
     con.query(queryStatement, function (err, result){
       if (err) throw err;
       console.log("1 record inserted");
