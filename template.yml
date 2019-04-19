@@ -56,3 +56,5 @@ Resources:
       GroupDescription: Security Group for RDS public access
       DBSecurityGroupIngress:
         - CIDRIP: 0.0.0.0/0
+  CognitoInstace:
+    Type: AWS::Cognito::UserPool
