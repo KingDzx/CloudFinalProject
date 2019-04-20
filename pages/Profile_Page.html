@@ -6,7 +6,7 @@
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <link rel="stylesheet" href="./css/Profile_Page.css" >
     <link rel="stylesheet" href="./css/topnav.css">
-<title>Profile Page</title>
+    <title>Profile Page</title>
 </head>
 <body>
   <div class="topnav">
@@ -29,11 +29,12 @@
                     <!-- END SIDEBAR USERPIC -->
                     <!-- SIDEBAR USER TITLE -->
                     <div class="profile-usertitle">
-                        <div class="profile-usertitle-name">
-                            Randell Persad
+                        <div class="profile-usertitle-name" >
+                            <p>Name: Zachary Orr</p>
+                            <p id="username"></p>
                         </div>
                         <div class="profile-usertitle-job">
-                            Video Editor
+                            Video/Image Editor
                         </div>
                     </div>
                     <!-- END SIDEBAR USER TITLE -->
@@ -73,7 +74,21 @@
             </div>
             <div class="col-md-9">
                 <div class="profile-content">
-                   User description
+                    <p>User Subcription</p>
+                   <p id="subscription">Basic</p>
+                </div>
+
+
+                <div>
+                    <form>
+                        <select id="subscriptionChoice" name="Subcriptions">
+                            <option value="Basic" selected="selected">Change Your Subscription</option>
+                            <option value="Basic">Basic</option>
+                            <option value="Premium">Premium</option>
+                            <option value="Enterprise">Enterprise</option>
+                        </select>
+                        <button type="button" onclick="myFunction()">Change</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -83,5 +98,13 @@
     </center>
     <br>
     <br>
+
+    <script>
+        function myFunction() {
+            var choice = document.getElementById("subscriptionChoice");
+            var x = document.getElementById("subscription").innerHTML = choice.value;
+        }
+    </script>
+
 </body>
 </html>

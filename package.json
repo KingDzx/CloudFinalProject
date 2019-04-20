@@ -18,8 +18,8 @@
   },
   "homepage": "https://github.com/KingDzx/CloudFinalProject#readme",
   "dependencies": {
+    "aws-sdk": "latest",
     "express": "^4.16.4",
-    "mysql": "latest",
-    "aws-sdk": "latest"
+    "mysql": "^2.17.1"
   }
 }
