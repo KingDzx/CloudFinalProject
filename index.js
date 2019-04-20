@@ -13,13 +13,15 @@ var con = mysql.createConnection({
 });
 
 con.connect(function(err) {
-  if (err) throw err;
-  console.log("Connected!");
-  var sql = "CREATE TABLE IF NOT EXISTS UserAccount (Email VARCHAR(255) NOT NULL PRIMARY KEY, Name VARCHAR(255) NOT NULL, Number VARCHAR(255) NOT NULL, Password VARCHAR(255) NOT NULL)";
-  con.query(sql, function (err, result) {
-    if (err) throw err;
-    console.log("Table created");
-  });
+  if (err) console.log("Error!!!!!");
+  else{
+    console.log("Connected!");
+    var sql = "CREATE TABLE IF NOT EXISTS UserAccount (Email VARCHAR(255) NOT NULL PRIMARY KEY, Name VARCHAR(255) NOT NULL, Number VARCHAR(255) NOT NULL, Password VARCHAR(255) NOT NULL)";
+    con.query(sql, function (err, result) {
+      if (err) throw err;
+      console.log("Table created");
+    });
+  }
 });
 
 app.use(BP.json())
@@ -43,8 +45,8 @@ app.post('/registration', function(req, res){
     var queryStatement = "INSERT INTO UserAccount (Email, Name, Number, Password) VALUES ('"+email+"', '"+name+"','"+number+"','"+password+"')";
 
     con.query(queryStatement, function (err, result){
-      if (err) throw err;
-      console.log("1 record inserted");
+      if (err) console.log("Error!!!!!");
+      else console.log("1 record inserted");
     })
     res.sendFile(path.join(__dirname + '/pages/index.html'))
   }
@@ -55,12 +57,14 @@ app.post('/login', function(req, res){
 
   var queryStatement = "SELECT * from UserAccount WHERE Email = '"+email+"'";
   con.query(queryStatement, function (err, result){
-    if (err) throw err;
-    console.log(result[0].Name);
-    if (result[0].Password == password){
-      res.sendFile(path.join(__dirname + '/pages/Profile_Page.html'));
-    }else{
-      res.sendFile(path.join(__dirname + '/pages/login.html'))
+    if (err) console.log("Error!!!!!");
+    else{
+      console.log(result[0].Name);
+      if (result[0].Password == password){
+        res.sendFile(path.join(__dirname + '/pages/Profile_Page.html'));
+      }else{
+        res.sendFile(path.join(__dirname + '/pages/login.html'))
+      }
     }
   })
 })
