@@ -58,7 +58,3 @@ Resources:
         - CIDRIP: 0.0.0.0/0
   CognitoInstance:
     Type: AWS::Cognito::UserPool
-  ElasticLoadBalancer:
-    Type: AWS::ElasticLoadBalancing::LoadBalancer
-  ElastiCache:
-    Type: AWS::ElastiCache::CacheCluster
