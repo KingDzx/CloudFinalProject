@@ -75,7 +75,8 @@
             <div class="col-md-9">
                 <div class="profile-content">
                     <p>User Subcription</p>
-                   <p id="subscription">Basic</p>
+                    <p id="prevSub">Previous: </p>
+                    <p id="subscription">Currently: Basic</p>
                 </div>
 
 
@@ -102,7 +103,10 @@
     <script>
         function myFunction() {
             var choice = document.getElementById("subscriptionChoice");
-            var x = document.getElementById("subscription").innerHTML = choice.value;
+            var prev = document.getElementById("subscription").innerHTML.split(" ");
+            console.log(prev[1])
+            var x = document.getElementById("subscription").innerHTML = "Currently: " + choice.value;
+            var v = document.getElementById("prevSub").innerHTML = "Previous: " + prev[1];
         }
     </script>
 
